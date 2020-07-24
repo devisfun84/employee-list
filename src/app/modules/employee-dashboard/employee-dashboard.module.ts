@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { EmployeeGridComponent } from './components/employee-grid/employee-grid.component';
+import { EmployeeDashboardRoutingModule } from './employee-dashboard-routing.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [EmployeeGridComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    EmployeeDashboardRoutingModule
   ]
 })
 export class EmployeeDashboardModule { }
