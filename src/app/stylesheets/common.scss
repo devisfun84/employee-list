@@ -1,0 +1,26 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    header {
+        background: #cccccc;
+        padding: 20px;
+        text-align: center;
+    }
+    footer {
+        background: blue;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+    }
+    main {
+        flex: 1;
+        overflow: auto;
+    }
+}

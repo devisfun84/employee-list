@@ -5,8 +5,16 @@ import { Employee } from '../../shared/models/employee.models';
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeServiceService {
-  private employeeList: Employee[] = [];
+export class EmployeeService {
+  private employeeList: Employee[] = [
+    {
+      name: 'Subhamoy Ghosh',
+      id: '220357',
+      age: 35,
+      department: 'CDB',
+      salary: 150000
+    }
+  ];
 
   constructor() { }
 

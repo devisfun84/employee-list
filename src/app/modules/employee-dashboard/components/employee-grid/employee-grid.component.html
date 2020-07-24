@@ -1,1 +1,32 @@
-<p>employee-grid works!</p>
+<div class="text-right m-2">
+    <button class="btn btn-primary" [routerLink]="['/add-employee']">Add Employee</button>
+</div>
+<div *ngIf="employees && employees.length">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Employee Name</td>
+                <td>Employee ID</td>
+                <td>Employee Age</td>
+                <td>Employee Salary</td>
+                <td>Employee Department</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees">
+                <td>{{emp.name}}</td>
+                <td>{{emp.id}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.salary | currency }}</td>
+                <td>{{emp.department}}</td>
+                <td>
+                    <div>
+                        <button class="btn btn-secondary mr-2">Edit</button>
+                        <button class="btn btn-secondary">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
