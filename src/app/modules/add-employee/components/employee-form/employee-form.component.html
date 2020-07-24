@@ -1,1 +1,30 @@
-<p>employee-form works!</p>
+<div class="">
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Employee Name</label>
+      <input id="name" type="text" class="form-control" formControlName="name"/>
+    </div>
+    <div *ngIf="shouldShowError('name')" class="error">
+      This field has error
+    </div>
+    <div class="form-group">
+      <label for="id">Employee Id</label>
+      <input id="id" type="text" class="form-control" formControlName="id"/>
+    </div>
+    <div class="form-group">
+      <label for="age">Employee Age</label>
+      <input id="age" type="text" class="form-control" formControlName="age"/>
+    </div>
+    <div class="form-group">
+      <label for="salary">Employee Salary</label>
+      <input id="salary" type="text" class="form-control" formControlName="salary"/>
+    </div>
+    <div class="form-group">
+      <label for="department">Employee Department</label>
+      <input id="department" type="text" class="form-control" formControlName="department"/>
+    </div>
+    <div class="text-right mt-2">
+      <button class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>

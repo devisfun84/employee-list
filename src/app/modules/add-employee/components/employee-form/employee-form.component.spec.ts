@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EmployeeFormComponent } from './employee-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('EmployeeFormComponent', () => {
   let component: EmployeeFormComponent;
@@ -8,7 +9,8 @@ describe('EmployeeFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmployeeFormComponent ]
+      declarations: [ EmployeeFormComponent ],
+      imports: [ReactiveFormsModule]
     })
     .compileComponents();
   }));
@@ -22,4 +24,10 @@ describe('EmployeeFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should check the validity of the form', () => {
+    const field = component.getControl('name');
+    field.setValue('Subhamoy');
+    expect(component.employeeForm.valid).toEqual(true);
+  })
 });

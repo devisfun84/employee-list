@@ -32,7 +32,7 @@ export class EmployeeService {
 
   addEmployee(emp: Employee): void {
     if (!this.ifEmployeeExists(emp.id)) {
-      this.employeeList.push();
+      this.employeeList.push(emp);
     } else {
       console.log("Employee with same ID already exist");
     }    
